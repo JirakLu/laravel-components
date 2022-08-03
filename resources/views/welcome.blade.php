@@ -7,9 +7,12 @@
     <title>Laravel Components</title>
 
     @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
+    @livewireStyles
 </head>
 <body>
 
+
+    @vite('resources/js/app.js')
+    @livewireScripts
 </body>
 </html>
