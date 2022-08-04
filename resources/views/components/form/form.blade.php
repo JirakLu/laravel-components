@@ -1,7 +1,17 @@
+@php
+    $styles = [
+        "default" => "space-y-4 w-1/2",
+        "override" => "bg-red-500",
+    ]
+@endphp
+
+
 <form action="{{ $action }}"
       @if($isBasicMethod()) method="{{ $method->value }}" @endif
-        {{ $attributes->class(["space-y-4 w-1/2 bg-red-500"]) }}
->
+        {{ $attributes->class([
+            $styles["default"],
+            $styles["override"] => !isset($class),
+        ]) }}>
     @unless($noCsrf)
         @csrf
     @endunless
