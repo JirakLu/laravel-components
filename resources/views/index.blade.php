@@ -10,9 +10,9 @@
     @livewireStyles
 </head>
 <body>
+@yield('content')
 
-
-    @vite('resources/js/app.js')
-    @livewireScripts
+@vite('resources/js/app.js')
+@livewireScripts
 </body>
 </html>
