@@ -9,7 +9,8 @@ class FormRequest extends BaseFormRequest
     public function rules(): array
     {
         return [
-            "name" => "required|min:2"
+            "name" => "required|min:2",
+            "newsletter" => "accepted",
         ];
     }
 

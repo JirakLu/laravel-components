@@ -1,10 +1,10 @@
 @php
     $labelStyles = $hideLabel ? "sr-only" : "font-medium text-gray-700 select-none";
 
-
     $checkBoxStyles = [
         "h-4 w-4 text-indigo-600 border-gray-300 rounded",
-        "focus:ring-indigo-500"
+        "focus:ring-indigo-500",
+        "border-red-500" => isset($name) ? $errors->has($name) : false,
     ]
 
 @endphp
