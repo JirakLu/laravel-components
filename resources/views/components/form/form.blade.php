@@ -1,7 +1,7 @@
 @php
     $styles = [
         "default" => "p-4 space-y-4 max-w-md mx-auto",
-        "override" => "bg-gray-200",
+        "override" => "bg-gray-100",
     ]
 @endphp
 

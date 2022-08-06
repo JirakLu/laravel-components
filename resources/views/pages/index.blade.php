@@ -9,6 +9,10 @@
             </x-slot:prefixIcon>
         </x-form::input>
 
+        <x-form::check-box label="Newsletter" name="color">
+            Do you agree to receive our newsletter?
+        </x-form::check-box>
+
 
         <button type="submit">Submit</button>
     </x-form::form>
