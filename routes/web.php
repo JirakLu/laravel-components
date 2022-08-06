@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'pages.index')->name("index");
+
+Route::post('/form', [FormController::class, 'index'])->name("form");
