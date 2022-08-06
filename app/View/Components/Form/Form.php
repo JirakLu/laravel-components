@@ -8,13 +8,11 @@ use Illuminate\View\Component;
 
 class Form extends Component
 {
-
     public function __construct(
-        public string      $action,
+        public string $action,
         public FormMethods $method = FormMethods::POST,
-        public ?bool       $noCsrf = null,
-    )
-    {
+        public ?bool $noCsrf = null,
+    ) {
     }
 
     public function isBasicMethod(): bool

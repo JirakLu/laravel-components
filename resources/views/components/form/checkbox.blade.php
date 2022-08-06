@@ -1,22 +1,16 @@
 @php
-    $labelStyles = $hideLabel ? "sr-only" : "font-medium text-gray-700 select-none";
+$labelStyles = $hideLabel ? 'sr-only' : 'font-medium text-gray-700 select-none';
 
-    $checkBoxStyles = [
-        "h-4 w-4 text-indigo-600 border-gray-300 rounded",
-        "focus:ring-indigo-500",
-        "border-red-500" => isset($name) ? $errors->has($name) : false,
-    ]
+$checkBoxStyles = ['h-4 w-4 text-indigo-600 border-gray-300 rounded', 'focus:ring-indigo-500', 'border-red-500' => isset($name) ? $errors->has($name) : false];
 
 @endphp
 
 
 <div class="relative flex items-start">
-    <div class="flex items-center h-5">
-        <input {{ $attributes->class($checkBoxStyles) }}
-               id="{{ $id }}" aria-describedby="{{ $id }}-description"
-               @isset($name) name="{{ $name }}" @endisset
-               type="checkbox"
-        >
+    <div class="flex h-5 items-center">
+        <input {{ $attributes->class($checkBoxStyles) }} id="{{ $id }}"
+            aria-describedby="{{ $id }}-description"
+            @isset($name) name="{{ $name }}" @endisset type="checkbox">
     </div>
     <div class="ml-3 text-sm">
         <label for="{{ $id }}" @class([$labelStyles, $labelClass])>{{ $label }}</label>

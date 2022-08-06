@@ -8,28 +8,26 @@ use Illuminate\View\Component;
 
 class Checkbox extends Component
 {
-
     /**
      * @throws MissingArgumentException
      */
     public function __construct(
-        public string  $label,
+        public string $label,
         public ?string $name = null,
         public ?string $id = null,
-        public mixed   $value = null,
-        public bool    $remember = false,
-        public string  $labelClass = "",
+        public mixed $value = null,
+        public bool $remember = false,
+        public string $labelClass = '',
 
-        public bool    $hideLabel = false,
-        public bool    $noName = false,
-    )
-    {
+        public bool $hideLabel = false,
+        public bool $noName = false,
+    ) {
         if (is_null($this->id)) {
             $this->id = rand();
         }
 
         if (is_null($this->name) && !$this->noName) {
-            throw new MissingArgumentException('Missing argument $name, either pass it or set noName to true.');
+            throw new MissingArgumentException("Missing argument $name, either pass it or set noName to true.");
         }
     }
 

@@ -1,0 +1,22 @@
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "jsxSingleQuote": false,
+    "singleQuote": true,
+    "printWidth": 120,
+    "arrowParens": "avoid",
+    "phpVersion": "8.1",
+    "overrides": [
+        {
+            "files": ["*.blade.php"],
+            "options": {
+                "printWidth": 120,
+                "tabWidth": 4,
+                "wrapAttributes": "auto",
+                "sortTailwindcssClasses": true,
+                "parser": "blade"
+            }
+        }
+    ]
+}

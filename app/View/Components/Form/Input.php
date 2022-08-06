@@ -8,26 +8,24 @@ use Illuminate\View\Component;
 
 class Input extends Component
 {
-
     /**
      * @throws MissingArgumentException
      */
     public function __construct(
-        public string  $label,
+        public string $label,
         public ?string $name = null,
         public ?string $id = null,
-        public mixed   $value = null,
-        public bool    $remember = false,
-        public bool    $required = false,
+        public mixed $value = null,
+        public bool $remember = false,
+        public bool $required = false,
 
         public ?string $suffixText = null,
         public ?string $prefixText = null,
         public ?string $cornerHint = null,
 
-        public bool    $hideLabel = false,
-        public bool    $noName = false,
-    )
-    {
+        public bool $hideLabel = false,
+        public bool $noName = false,
+    ) {
         if (is_null($this->id)) {
             $this->id = rand();
         }

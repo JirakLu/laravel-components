@@ -7,10 +7,7 @@ use Illuminate\View\Component;
 
 class CheckboxGroup extends Component
 {
-
-    public function __construct(
-        public string $legend,
-    )
+    public function __construct(public string $legend)
     {
     }
 
