@@ -13,6 +13,7 @@
             </x-slot:prefixIcon>
         </x-form::input>
 
+
         <button type="submit">Submit</button>
     </x-form::form>
 @endsection

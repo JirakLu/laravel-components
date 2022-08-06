@@ -1,11 +1,11 @@
 @php
-    $labelStyles = $hideLabel ? "sr-only" : "block text-sm font-medium text-gray-700";
+    $labelStyles = $hideLabel ? "sr-only" : "block text-sm font-medium text-gray-700 select-none";
 
     $inputStyles = [
         "block w-full sm:text-sm border-gray-300 rounded-md",
         "focus:ring-indigo-500 focus:border-indigo-500",
         "placeholder-gray-500",
-        "border-red-500" => $errors->has($name),
+        "border-red-500" => isset($name) ? $errors->has($name) : false,
         "pl-12" => isset($prefixIcon),
         "pr-12" => isset($suffixIcon),
         "pl-10" => isset($prefixText),
@@ -57,9 +57,11 @@
             </div>
         @endif
     </div>
-    @error($name)
-    <p class="mt-2 text-sm text-red-600 italic" id="{{ $id }}-error">{{ $message }}</p>
-    @enderror
+    @isset($name)
+        @error($name)
+        <p class="mt-2 text-sm text-red-600 italic" id="{{ $id }}-error">{{ $message }}</p>
+        @enderror
+    @endisset
     @isset($slot)
         <div class="mt-2 text-sm text-gray-500" id="{{ $id }}-description">
             {{ $slot }}
