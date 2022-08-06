@@ -19,7 +19,7 @@
         >
     </div>
     <div class="ml-3 text-sm">
-        <label for="{{ $id }}" @class($labelStyles)>{{ $label }}</label>
+        <label for="{{ $id }}" @class([$labelStyles, $labelClass])>{{ $label }}</label>
         <p id="{{ $id }}-description" class="text-gray-500">{{ $slot }}</p>
     </div>
 </div>

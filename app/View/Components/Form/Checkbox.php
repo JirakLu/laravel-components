@@ -6,7 +6,7 @@ use App\Exceptions\MissingArgumentException;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class CheckBox extends Component
+class Checkbox extends Component
 {
 
     /**
@@ -18,6 +18,7 @@ class CheckBox extends Component
         public ?string $id = null,
         public mixed   $value = null,
         public bool    $remember = false,
+        public string  $labelClass = "",
 
         public bool    $hideLabel = false,
         public bool    $noName = false,
@@ -43,6 +44,6 @@ class CheckBox extends Component
 
     public function render(): View
     {
-        return view('components.form.check-box');
+        return view('components.form.checkbox');
     }
 }
