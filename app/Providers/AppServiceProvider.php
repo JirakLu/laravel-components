@@ -25,5 +25,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::componentNamespace("App\\View\\Components\\Form", "form");
+        Blade::componentNamespace("App\\View\\Components\\Icons", "icons");
     }
 }
