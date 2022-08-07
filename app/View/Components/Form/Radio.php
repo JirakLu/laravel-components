@@ -6,7 +6,7 @@ use App\Exceptions\MissingArgumentException;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Checkbox extends Component
+class Radio extends Component
 {
     /**
      * @throws MissingArgumentException
@@ -42,6 +42,6 @@ class Checkbox extends Component
 
     public function render(): View
     {
-        return view('components.form.checkbox');
+        return view('components.form.radio');
     }
 }
